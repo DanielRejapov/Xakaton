@@ -1,0 +1,222 @@
+
+/* Стили для боковой панели */
+body {
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+html{
+    background-color: dimgray;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    width: 400px;
+  }
+  
+  .navigation__item a {
+    color: var(--secondary-color);
+    font-size: var(--nav-size);
+    text-decoration: none;
+  }
+  
+  .navigation__item a:hover {
+    color: var(--primary-color);
+  }
+.experience {
+    display: flex;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: black;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: white;
+}
+
+h1{
+    color: black;
+}
+
+.sidebar h1 {
+    text-align: center;
+}
+
+.sidebar p{
+    color: black;
+    text-align: center;
+}
+
+/* Стили для основного контента */
+.contents{
+    margin-top: auto;
+    padding: 70px;
+}
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
+.content p{
+    width: 500px;
+}
+.content img{
+    display: flex;
+    justify-content: left;
+    border-radius: 75%;
+    width: 150px;
+    height: 150px;
+}
+.image{
+    display: flex;
+    justify-content: flex-end;
+}
+.experience-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn{
+    background-color: white;
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: grey;
+}
+
+.image-container{
+    display: flex;
+    justify-content: space-between;
+}
+.image-container:nth-child(1){
+    justify-content: flex-start;
+    width: 250px;
+    height: 150px;
+}
+.image-container:nth-child(2){
+    justify-content: center;
+    height: 150px;
+}
+.image-container:nth-child(3){
+    justify-content: flex-end;
+    width: 250px;
+    height: 150px;
+}
+.img{
+    transition: transform 0.5 ease;
+}
+.img:hover{
+    transform: scale(1.1);
+}
+/* Размеры для ноутбуков */
+@media screen and (max-width: 1200px){
+   .image-container:first-child{
+    display: none;
+   } 
+}
+/* Прогресс в процентах */
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    margin-left: 260px;
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    height: 14px;
+    background: black;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: grey;
+    border-radius: 3px;
+    position: relative;
+    animation: fillbars 2.5s 1;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: white;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
+@keyframes fillbars {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100;
+    }
+}
+.navbar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    object-fit: cover;
+    margin-left: 300px;
+    padding-top: 90px;
+}
+
+
+
+    
+
